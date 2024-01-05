@@ -18,9 +18,9 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ap-south-1 # write your own region here
+          aws-region: Mumbai # write your own region here
 
       - name: Deploy to AWS
-        run: 
+        run: |
           aws s3 sync ./k8s-mario s3://seedbucket1
           # Add your deployment commands here
